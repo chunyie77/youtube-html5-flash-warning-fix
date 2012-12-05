@@ -1,0 +1,24 @@
+{
+    "name" : "YouTube HTML5 Flash Warning Fix"
+  , "version" : "0.0.1"
+  , "manifest_version": 2
+  , "description" : "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled).  Silly bug YouTube hasn't fixed yet :)"
+  , "background" : {
+        "scripts" : [ "google-analytics.js" ]
+      , "persistent" : false
+    }
+  , "icons": { "128": "icon-128x128.png", "48": "icon-48x48.png", "16": "icon-16x16.png" }
+  , "content_scripts" : [{
+      "all_frames" : true,
+      "js" : [ "zepto.min.js", "script.js" ],
+      "matches" : [
+          "http://youtube.com/*"
+        , "https://youtube.com/*"
+        , "http://www.youtube.com/*"
+        , "https://www.youtube.com/*"
+      ]
+    }]
+  , "homepage_url": "https://github.com/niftylettuce/youtube-html5-flash-warning-fix"
+  , "content_security_policy" : "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+  , "update_url": "http://clients2.google.com/service/update2/crx"
+}
