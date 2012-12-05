@@ -19,8 +19,8 @@
 
   if (!$('#html5-player-messages').hasClass('hid')) {
     // we could use yt.VIDEO_ID here with chrome ext passing global var
-    var videoID = $('input[name="video_id"]').val();
-    $('#watch-player').replaceWith($('<iframe width="640" height="390" src="http://www.youtube.com/embed/' + videoID + '?autoplay=1" frameborder="0" allowfullscreen></iframe>'));
+    var videoID = $('meta[name="twitter:player"]').val();
+    $('#watch-player').replaceWith($('<iframe width="640" height="390" src="' + videoID + '?autoplay=1" frameborder="0" allowfullscreen></iframe>'));
   }
 
 })(Zepto);
