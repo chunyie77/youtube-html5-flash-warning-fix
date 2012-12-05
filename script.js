@@ -19,7 +19,7 @@
 
   if (!$('#html5-player-messages').hasClass('hid')) {
     // we could use yt.VIDEO_ID here with chrome ext passing global var
-    var videoID = $('meta[name="twitter:player"]').val();
+    var videoID = $('#watch-mfu-button').attr('data-video-id');
     $('#watch-player').replaceWith($('<iframe width="640" height="390" src="' + videoID + '?autoplay=1" frameborder="0" allowfullscreen></iframe>'));
   }
 
