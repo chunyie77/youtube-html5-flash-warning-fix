@@ -17,7 +17,7 @@
 ;(function($) {
 
 
-  if (!$('#html5-player-messages').hasClass('hid')) {
+  if (!$('#html5-player-messages').hasClass('hid') || $('#watch-video').find('.yt-alert')) {
     // we could use yt.VIDEO_ID here with chrome ext passing global var
     var videoID = $('#watch-mfu-button').attr('data-video-id');
     $('#watch-player').replaceWith($('<iframe width="640" height="390" src="http://www.youtube.com/embed/' + videoID + '?autoplay=1" frameborder="0" allowfullscreen></iframe>'));
