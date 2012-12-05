@@ -1,8 +1,8 @@
 {
-    "name" : "YouTube HTML5 Flash Warning Fix"
+    "name" : "HTML5 Flash Warning Fix for YouTube™"
   , "version" : "0.0.1"
   , "manifest_version": 2
-  , "description" : "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled).  Silly bug YouTube hasn't fixed yet :)"
+  , "description" : "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled)."
   , "background" : {
         "scripts" : [ "google-analytics.js" ]
       , "persistent" : false
