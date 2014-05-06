@@ -1,24 +1,44 @@
 {
-    "name" : "HTML5 Flash Warning Fix for YouTube™"
-  , "version" : "0.0.2"
-  , "manifest_version": 2
-  , "description" : "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled)."
-  , "background" : {
-        "scripts" : [ "google-analytics.js" ]
-      , "persistent" : false
-    }
-  , "icons": { "128": "icon-128x128.png", "48": "icon-48x48.png", "16": "icon-16x16.png" }
-  , "content_scripts" : [{
-      "all_frames" : true,
-      "js" : [ "zepto.min.js", "script.js" ],
-      "matches" : [
-          "http://youtube.com/*"
-        , "https://youtube.com/*"
-        , "http://www.youtube.com/*"
-        , "https://www.youtube.com/*"
+  "name": "HTML5 Flash Warning Fix for YouTube™",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled).",
+  "content_security_policy" : "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "homepage_url": "https://github.com/niftylettuce/youtube-html5-flash-warning-fix",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js",
+      "src/bg/google-analytics.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "contentSettings",
+    "notifications",
+    "activeTab"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://youtube.com/*",
+        "http://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
       ]
-    }]
-  , "homepage_url": "https://github.com/niftylettuce/youtube-html5-flash-warning-fix"
-  , "content_security_policy" : "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
-  , "update_url": "http://clients2.google.com/service/update2/crx"
+    }
+  ],
+  "web_accessible_resources": [
+    "icons/icon48.png",
+    "bower_components/zepto/zepto.min.js",
+    "src/inject/fix.js"
+  ]
 }

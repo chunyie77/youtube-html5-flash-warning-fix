@@ -1,0 +1,35 @@
+{
+  "name": "HTML5 Flash Warning Fix for YouTube™",
+  "version": "0.0.3",
+  "authors": [
+    "Nick Baugh <niftylettuce@gmail.com>"
+  ],
+  "description": "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled).",
+  "keywords": [
+    "youtube",
+    "html5",
+    "flash",
+    "warning",
+    "fix",
+    "extension"
+  ],
+  "homepage": "https://github.com/niftylettuce/youtube-html5-flash-warning-fix",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "~1.1.3"
+  },
+  "exportsOverride": {
+    "zepto": {
+      "./": [
+        "zepto.min.js"
+      ]
+    }
+  }
+}

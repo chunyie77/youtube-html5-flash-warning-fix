@@ -1,0 +1,26 @@
+{
+  "name": "html5-flash-warning-fix-for-youtube",
+  "private": true,
+  "version": "0.0.3",
+  "description": "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled).",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/niftylettuce/youtube-html5-flash-warning-fix.git"
+  },
+  "author": "Nick Baugh <niftylettuce@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niftylettuce/youtube-html5-flash-warning-fix/issues"
+  },
+  "homepage": "https://github.com/niftylettuce/youtube-html5-flash-warning-fix",
+  "dependencies": {
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-bower-task": "^0.3.4",
+    "bower": "^1.3.3",
+    "grunt-contrib-compress": "^0.8.0"
+  }
+}
