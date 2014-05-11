@@ -20,7 +20,7 @@
   /*globals yt*/
   var videoID = window.yt.config_.VIDEO_ID
 
-  if ($('#html5-player-messages').css('display') === 'none')
+  if ($('#html5-player-messages').css('display') === 'none' && $('#html5-video-player').length === 0)
     $('#player-api').replaceWith($('<iframe width="640" height="390" src="https://www.youtube.com/embed/' + videoID + '?autoplay=1" frameborder="0" allowfullscreen></iframe>'))
 
 })(window, Zepto)

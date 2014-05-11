@@ -1,10 +1,12 @@
 {
   "name": "HTML5 Flash Warning Fix for YouTube™",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled).",
-  "content_security_policy" : "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "homepage_url": "https://github.com/niftylettuce/youtube-html5-flash-warning-fix",
+  "author": {
+    "email": "niftylettuce@gmail.com"
+  },
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

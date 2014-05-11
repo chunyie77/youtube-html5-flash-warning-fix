@@ -1,7 +1,7 @@
 {
   "name": "html5-flash-warning-fix-for-youtube",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "Automatically replaces the Adobe Flash warning message with an embedded HTML5 player (if you have Flash disabled).",
   "repository": {
     "type": "git",

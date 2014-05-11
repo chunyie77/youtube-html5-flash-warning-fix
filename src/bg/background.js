@@ -15,6 +15,10 @@ chrome.runtime.onInstalled.addListener(function(details) {
       msg.cancel()
       chrome.tabs.create({
         url: 'https://youtube.com'
+      }, function(tab) {
+        chrome.tabs.reload(tab.id, {
+          bypassCache: true
+        })
       })
     })
   }
